@@ -1954,9 +1954,10 @@ textarea {
     top: calc(100% + 8px);
     left: 0;
     right: 0;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 0;
-    padding: 0.6rem;
+    padding: 0.5rem;
     color: var(--navy);
     background: var(--white);
     border: 1px solid rgba(10, 31, 68, 0.1);
@@ -1974,8 +1975,120 @@ textarea {
     pointer-events: auto;
   }
 
-  .site-nav a {
-    padding: 0.82rem;
+  .site-nav > a {
+    display: block;
+    padding: 0.82rem 1rem;
+    text-align: center;
+    border-radius: 6px;
+    opacity: 1;
+  }
+
+  /* Disable the left-origin underline on mobile — it causes a shift-left effect */
+  .site-nav > a::after,
+  .site-nav .has-dropdown > a::after {
+    display: none;
+  }
+
+  .site-nav > a:hover,
+  .site-nav > a.is-active {
+    color: var(--blue);
+    background: rgba(11, 94, 215, 0.07);
+  }
+
+  /* Mobile mega menu: inline accordion */
+  .nav-item.has-dropdown {
+    display: block;
+    width: 100%;
+  }
+
+  .nav-item.has-dropdown > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0.82rem 1rem;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 6px;
+    text-align: center;
+  }
+
+  .nav-item.has-dropdown > a:hover {
+    background: rgba(11, 94, 215, 0.06);
+  }
+
+  .mega-menu {
+    position: static;
+    transform: none;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    box-shadow: none;
+    padding: 0;
+    background: rgba(11, 94, 215, 0.05);
+    border: 1px solid rgba(11, 94, 215, 0.1);
+    margin: 0 0 0.25rem;
+    opacity: 1;
+    visibility: visible;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s var(--ease), padding 0.35s var(--ease);
+  }
+
+  .mega-menu.is-open {
+    max-height: 700px;
+    padding: 1rem;
+  }
+
+  /* Disable hover-only opening on mobile */
+  .has-dropdown:hover .mega-menu {
+    max-height: 0;
+    padding: 0;
+  }
+
+  .has-dropdown.is-open .mega-menu {
+    max-height: 700px;
+    padding: 1rem;
+  }
+
+  .mega-menu__grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .mega-menu__col {
+    text-align: center;
+  }
+
+  .mega-menu__col h4 {
+    margin-bottom: 0.5rem;
+  }
+
+  .mega-menu__col a {
+    padding: 0.45rem 0.5rem;
+    border-radius: 4px;
+    opacity: 1;
+    justify-content: center;
+  }
+
+  /* Kill left-origin underline on mega menu links — causes shift-left on hover */
+  .mega-menu__col a::after {
+    display: none;
+  }
+
+  .mega-menu__col a:hover {
+    color: var(--blue);
+    background: rgba(11, 94, 215, 0.08);
+    opacity: 1;
+  }
+
+  .has-dropdown > a span.material-symbols-outlined {
+    transition: transform 0.3s;
+    font-size: 1rem;
+  }
+
+  .has-dropdown.is-open > a span.material-symbols-outlined {
+    transform: rotate(180deg);
   }
 
   .nav-toggle.is-open span:nth-child(1) {

@@ -73,8 +73,37 @@
     navToggle.setAttribute("aria-expanded", String(Boolean(isOpen)));
   });
 
+  // Mobile mega menu: click to toggle the Services dropdown accordion
+  const dropdownItems = Array.from(document.querySelectorAll(".nav-item.has-dropdown"));
+  dropdownItems.forEach((item) => {
+    const trigger = item.querySelector(":scope > a");
+    const megaMenu = item.querySelector(".mega-menu");
+    if (!trigger || !megaMenu) return;
+
+    trigger.addEventListener("click", (e) => {
+      // Only intercept on mobile breakpoint
+      if (window.innerWidth > 1080) return;
+      e.preventDefault();
+      const isOpen = item.classList.toggle("is-open");
+      megaMenu.classList.toggle("is-open", isOpen);
+    });
+
+    // Close the mega menu when an inner link is clicked
+    megaMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        item.classList.remove("is-open");
+        megaMenu.classList.remove("is-open");
+        nav?.classList.remove("is-open");
+        navToggle?.classList.remove("is-open");
+        navToggle?.setAttribute("aria-expanded", "false");
+      });
+    });
+  });
+
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
+      // Don't close nav when clicking the Services trigger on mobile (it toggles)
+      if (link.closest(".has-dropdown") && window.innerWidth <= 1080) return;
       nav?.classList.remove("is-open");
       navToggle?.classList.remove("is-open");
       navToggle?.setAttribute("aria-expanded", "false");
