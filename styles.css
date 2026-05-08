@@ -1967,6 +1967,13 @@ textarea {
     opacity: 0;
     pointer-events: none;
     transition: opacity 180ms ease, transform 180ms ease;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    scrollbar-width: none; /* Hide scrollbar for cleaner look */
+  }
+
+  .site-nav::-webkit-scrollbar {
+    display: none;
   }
 
   .site-nav.is-open {
@@ -1976,11 +1983,15 @@ textarea {
   }
 
   .site-nav > a {
-    display: block;
-    padding: 0.82rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 1rem;
     text-align: center;
     border-radius: 6px;
     opacity: 1;
+    font-size: 0.95rem;
+    font-weight: 600;
   }
 
   /* Disable the left-origin underline on mobile — it causes a shift-left effect */
@@ -2006,11 +2017,13 @@ textarea {
     align-items: center;
     justify-content: center;
     gap: 0.4rem;
-    padding: 0.82rem 1rem;
+    padding: 0.85rem 1rem;
     width: 100%;
     cursor: pointer;
     border-radius: 6px;
     text-align: center;
+    font-size: 0.95rem;
+    font-weight: 600;
   }
 
   .nav-item.has-dropdown > a:hover {
@@ -2018,73 +2031,124 @@ textarea {
   }
 
   .mega-menu {
-    position: static;
-    transform: none;
-    width: 100%;
+    position: static !important;
+    display: block !important;
+    transform: none !important;
+    width: 100% !important;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: none;
     padding: 0;
-    background: rgba(11, 94, 215, 0.05);
-    border: 1px solid rgba(11, 94, 215, 0.1);
-    margin: 0 0 0.25rem;
-    opacity: 1;
-    visibility: visible;
+    background: rgba(11, 94, 215, 0.03);
+    margin: 0.5rem 0;
+    opacity: 0;
+    visibility: hidden;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.35s var(--ease), padding 0.35s var(--ease);
+    transition: max-height 0.45s var(--ease), padding 0.45s var(--ease), opacity 0.3s var(--ease);
+    z-index: 100;
+    left: auto !important;
+    top: auto !important;
   }
 
-  .mega-menu.is-open {
-    max-height: 700px;
-    padding: 1rem;
+  /* Specifically target the open state to override any hover states */
+  .site-nav .nav-item.has-dropdown.is-open .mega-menu,
+  .site-nav .mega-menu.is-open {
+    max-height: 2000px !important;
+    padding: 1.25rem !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
   }
 
-  /* Disable hover-only opening on mobile */
-  .has-dropdown:hover .mega-menu {
-    max-height: 0;
-    padding: 0;
-  }
-
-  .has-dropdown.is-open .mega-menu {
-    max-height: 700px;
-    padding: 1rem;
+  /* Force disable desktop hover effects on mobile */
+  .site-nav .nav-item.has-dropdown:hover .mega-menu {
+    position: static;
+    transform: none;
   }
 
   .mega-menu__grid {
-    grid-template-columns: 1fr;
-    gap: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-left: 0;
+    margin-left: 0;
   }
 
   .mega-menu__col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
     text-align: center;
   }
 
   .mega-menu__col h4 {
-    margin-bottom: 0.5rem;
+    grid-column: 1 / -1;
+    margin-bottom: 0.2rem;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--blue);
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .mega-menu__col h4::before,
+  .mega-menu__col h4::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: rgba(11, 94, 215, 0.12);
   }
 
   .mega-menu__col a {
-    padding: 0.45rem 0.5rem;
-    border-radius: 4px;
-    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    gap: 0.4rem;
+    padding: 0.8rem;
+    background: var(--white);
+    border: 1px solid rgba(11, 94, 215, 0.08);
+    border-radius: 10px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: center;
+    transition: all 0.2s var(--ease);
   }
 
-  /* Kill left-origin underline on mega menu links — causes shift-left on hover */
-  .mega-menu__col a::after {
-    display: none;
-  }
-
-  .mega-menu__col a:hover {
+  .mega-menu__col a .material-symbols-outlined {
+    font-size: 1.25rem;
     color: var(--blue);
     background: rgba(11, 94, 215, 0.08);
-    opacity: 1;
+    width: 32px;
+    height: 32px;
+    display: grid;
+    place-items: center;
+    border-radius: 6px;
+  }
+
+  .mega-menu__col a:active,
+  .mega-menu__col a:hover {
+    background: var(--blue);
+    color: var(--white);
+    border-color: var(--blue);
+    transform: translateY(-2px);
+  }
+
+  .mega-menu__col a:active .material-symbols-outlined,
+  .mega-menu__col a:hover .material-symbols-outlined {
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.2);
   }
 
   .has-dropdown > a span.material-symbols-outlined {
     transition: transform 0.3s;
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 
   .has-dropdown.is-open > a span.material-symbols-outlined {
@@ -2192,6 +2256,23 @@ textarea {
   .site-header {
     width: min(100% - 24px, 1180px);
     margin-top: 10px;
+    top: auto; /* Allow the header to position more naturally if needed */
+  }
+
+  .emergency-banner {
+    padding: 10px 0;
+    font-size: 0.8rem;
+  }
+
+  .emergency-banner .section-shell {
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .emergency-banner strong {
+    display: block;
   }
 
   .brand img {
@@ -2237,13 +2318,15 @@ textarea {
   .hero__actions,
   .cta-band__inner,
   .footer__bottom {
-    align-items: stretch;
+    align-items: center; /* Changed from stretch to center */
     flex-direction: column;
   }
 
   .hero__actions .btn,
   .cta-band .btn {
-    width: 100%;
+    width: auto; /* Changed from 100% to auto */
+    min-width: 200px; /* Give them a decent touch target width */
+    max-width: 100%;
   }
 
   .hero__metrics,
