@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Controltek Services Limited provides HVAC, solar energy, electrical engineering, plumbing, maintenance, and construction services across Zambia." />
-  <title>Controltek Services Limited | Engineering Reliable Energy & HVAC Solutions</title>
+  <meta name="description" content="Controltek Services Limited delivers industrial automation, PLC and SCADA integration, HVAC, solar, electrical, plumbing, and construction services across Zambia." />
+  <title>Controltek Services Limited | Industrial Automation & Control Systems</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,300..700,0..1,-50..200&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800;900&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,300..700,0..1,-50..200&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <script type="application/ld+json">
   {
@@ -22,29 +22,14 @@
     },
     "telephone": "+260978245904",
     "email": "controltekservices3@gmail.com",
-    "serviceType": ["HVAC", "Solar Energy", "Electrical Engineering", "Plumbing", "Construction"]
+    "serviceType": ["Industrial Automation", "PLC Programming", "SCADA Integration", "HVAC", "Solar Energy", "Electrical Engineering", "Plumbing", "Construction"]
   }
   </script>
 </head>
-<body>
-  <div class="preloader" id="preloader" aria-hidden="true">
-    <div class="preloader__mark">
-      <img src="Assets/logo.jpg" alt="" />
-      <span></span>
-    </div>
-  </div>
-
-  <div class="emergency-banner">
-    <div class="section-shell">
-      <span class="pulse-icon"></span>
-      <strong>24/7 Technical Support Available:</strong> 
-      <a href="tel:+260978245904">+260 978 245904</a>
-    </div>
-  </div>
-
+  <body>
   <header class="site-header" id="siteHeader">
     <a class="brand" href="#home" aria-label="Controltek Services Limited home">
-      <img src="Assets/logo.jpg" alt="Controltek Services Limited logo" />
+      <img src="Assets/logo.png" alt="Controltek Services Limited logo" />
       <span>
         <strong>Controltek</strong>
         <small>Services Limited</small>
@@ -58,9 +43,9 @@
     </button>
 
     <nav class="site-nav" id="siteNav" aria-label="Primary navigation">
-      <a href="index.html#about">About</a>
+      <a href="#about">About</a>
       <div class="nav-item has-dropdown">
-        <a href="index.html#services">Services <span class="material-symbols-outlined">expand_more</span></a>
+        <a href="#services">Services <span class="material-symbols-outlined">expand_more</span></a>
         <div class="mega-menu">
           <div class="mega-menu__grid">
             <div class="mega-menu__col">
@@ -84,9 +69,8 @@
           </div>
         </div>
       </div>
-      <a href="index.html#projects">Projects</a>
-      <a href="index.html#maintenance">Maintenance</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </nav>
 
     <div class="header-actions">
@@ -94,90 +78,71 @@
         <span class="material-symbols-outlined" aria-hidden="true">call</span>
         +260 978 245904
       </a>
+      <button class="btn btn--primary header-quote quote-trigger" type="button">
+        <span class="material-symbols-outlined" aria-hidden="true">request_quote</span>
+        Request Quote
+      </button>
     </div>
   </header>
 
   <main>
     <section class="hero" id="home">
       <div class="hero__blueprint" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--one" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--two" aria-hidden="true"></div>
       <img class="hero__image" src="Assets/611945073_122168276774752665_838514749293394637_n.jpg" alt="Solar engineers working on a rooftop installation" fetchpriority="high" />
       <canvas class="hero__particles" id="particleCanvas" aria-hidden="true"></canvas>
       <div class="hero__overlay"></div>
 
       <div class="hero__content section-shell">
         <div class="hero__copy reveal">
-          <span class="eyebrow">Lusaka based engineering services</span>
-          <h1>Engineering Reliable Energy &amp; HVAC Solutions</h1>
+          <h1>ControlTek builds smarter, safer, and more efficient operations for modern industries.</h1>
           <p>
-            Controltek Services Limited delivers HVAC systems, solar energy solutions, electrical engineering,
-            plumbing, maintenance, and building construction services for residential, commercial, and industrial projects across Zambia.
+            We deliver PLC programming, SCADA integration, control panels, HVAC, solar, and electrical services with
+            the discipline and clarity expected from a serious engineering partner.
           </p>
           <div class="hero__actions">
-            <a class="btn btn--primary" href="#contact">
+            <button class="btn btn--primary quote-trigger" type="button">
               <span class="material-symbols-outlined" aria-hidden="true">assignment</span>
-              Request Service
-            </a>
-            <a class="btn btn--light" href="tel:+260978245904">
-              <span class="material-symbols-outlined" aria-hidden="true">call</span>
-              Call Now
-            </a>
-            <button class="btn btn--outline quote-trigger" type="button">
-              <span class="material-symbols-outlined" aria-hidden="true">request_quote</span>
-              Quick Quote
+              Request Quote
             </button>
+            <a class="btn btn--light" href="#projects">
+              <span class="material-symbols-outlined" aria-hidden="true">work</span>
+              View Projects
+            </a>
           </div>
-        </div>
-
-        <div class="hero__panel reveal">
-          <div class="hero__panel-top">
-            <span class="material-symbols-outlined" aria-hidden="true">verified</span>
-            <div>
-              <strong>Technical work. Clean execution.</strong>
-              <p>Safety-first teams for energy, HVAC, and building services.</p>
+          <div class="hero__chips" aria-label="Core capabilities">
+            <span>PLC programming</span>
+            <span>SCADA integration</span>
+            <span>Control panels</span>
+            <span>Lusaka, Zambia</span>
+          </div>
+          <div class="hero__slider" aria-label="Selected project images">
+            <div class="hero__slider-track">
+              <figure class="hero__slide"><img src="Assets/611945073_122168276774752665_838514749293394637_n.jpg" alt="" /></figure>
+              <figure class="hero__slide"><img src="Assets/619851383_122170756070752665_6607876470128424524_n.jpg" alt="" /></figure>
+              <figure class="hero__slide"><img src="Assets/695807910_122184010622752665_1314205142785555688_n.jpg" alt="" /></figure>
+              <figure class="hero__slide"><img src="Assets/637915777_122174073098752665_5136957511916690828_n.jpg" alt="" /></figure>
+              <figure class="hero__slide"><img src="Assets/611945073_122168276774752665_838514749293394637_n.jpg" alt="" /></figure>
+              <figure class="hero__slide"><img src="Assets/619851383_122170756070752665_6607876470128424524_n.jpg" alt="" /></figure>
+              <figure class="hero__slide"><img src="Assets/695807910_122184010622752665_1314205142785555688_n.jpg" alt="" /></figure>
+              <figure class="hero__slide"><img src="Assets/637915777_122174073098752665_5136957511916690828_n.jpg" alt="" /></figure>
             </div>
           </div>
-          <div class="hero__metrics">
-            <article>
-              <strong><span data-counter="5">0</span>+</strong>
-              <small>Years Experience</small>
-            </article>
-            <article>
-              <strong>24/7</strong>
-              <small>Response Support</small>
-            </article>
-            <article>
-              <strong>100%</strong>
-              <small>Quality Focus</small>
-            </article>
-          </div>
         </div>
-      </div>
 
-      <div class="floating-stats section-shell reveal">
-        <article>
-          <span class="material-symbols-outlined" aria-hidden="true">workspace_premium</span>
-          <strong><span data-counter="5">0</span>+ Years Experience</strong>
-        </article>
-        <article>
-          <span class="material-symbols-outlined" aria-hidden="true">public</span>
-          <strong>Nationwide Services</strong>
-        </article>
-        <article>
-          <span class="material-symbols-outlined" aria-hidden="true">domain</span>
-          <strong>Residential &amp; Commercial Projects</strong>
-        </article>
       </div>
     </section>
 
     <section class="trusted-by reveal">
       <div class="section-shell">
-        <span class="trusted-by__label">Built for residential, commercial, and industrial clients across Zambia</span>
+        <span class="trusted-by__label">Trusted by teams that value safe execution, technical clarity, and long-term reliability</span>
         <div class="trusted-by__logos">
-          <div class="logo-item"><span>Homes</span></div>
-          <div class="logo-item"><span>Offices</span></div>
-          <div class="logo-item"><span>Retail</span></div>
-          <div class="logo-item"><span>Industry</span></div>
-          <div class="logo-item"><span>Estates</span></div>
+          <div class="logo-item"><span>Mining</span></div>
+          <div class="logo-item"><span>Facilities</span></div>
+          <div class="logo-item"><span>Commercial</span></div>
+          <div class="logo-item"><span>Industrial</span></div>
+          <div class="logo-item"><span>Energy</span></div>
         </div>
       </div>
     </section>
@@ -185,17 +150,20 @@
     <section class="section about" id="about">
       <div class="section-shell about__grid">
         <div class="section-copy reveal">
-          <span class="eyebrow">About Controltek</span>
-          <h2>Reliable engineering support for buildings, energy systems, and climate control.</h2>
+          <span class="eyebrow">About ControlTek</span>
+          <h2>Engineering professionalism clients can see in the details.</h2>
           <p>
-            Controltek Services Limited is a Lusaka based technical services company built around dependable workmanship,
-            disciplined safety practices, and practical engineering solutions. Our teams support clients across Zambia with installation,
-            diagnostics, repairs, preventive maintenance, and project delivery.
+            ControlTek Services Limited is a Lusaka-based technical partner focused on industrial automation,
+            control systems, HVAC, solar energy, and electrical works.
           </p>
           <p>
-            From air-conditioning systems and solar installations to electrical works, plumbing, and building construction,
-            we bring structured planning, skilled technicians, and clear communication to every site.
+            We combine disciplined site execution, clean reporting, and practical problem-solving so every handover
+            feels dependable, understandable, and built for long-term operation.
           </p>
+          <div class="about__callout surface-card">
+            <strong>What clients get from us</strong>
+            <p>Clear scopes, reliable workmanship, and engineering support that keeps projects moving without guesswork.</p>
+          </div>
         </div>
 
         <div class="about__visual reveal">
@@ -203,65 +171,10 @@
           <div class="about__badge">
             <span class="material-symbols-outlined" aria-hidden="true">engineering</span>
             <strong>Field-tested teams</strong>
-            <small>HVAC, solar, electrical, plumbing, and construction</small>
+            <small>Automation, energy, HVAC, and electrical</small>
           </div>
         </div>
 
-        <div class="about__infographic reveal">
-          <article>
-            <span class="material-symbols-outlined" aria-hidden="true">health_and_safety</span>
-            <h3>Safety Led</h3>
-            <p>Work methods built around site safety, clean handover, and durable installations.</p>
-          </article>
-          <article>
-            <span class="material-symbols-outlined" aria-hidden="true">speed</span>
-            <h3>Fast Response</h3>
-            <p>Responsive support for diagnostics, breakdowns, repairs, and maintenance calls.</p>
-          </article>
-          <article>
-            <span class="material-symbols-outlined" aria-hidden="true">analytics</span>
-            <h3>Technical Clarity</h3>
-            <p>Clear inspection findings, practical recommendations, and transparent service scopes.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section process" id="process">
-      <div class="section-shell">
-        <div class="section-heading reveal">
-          <span class="eyebrow">Our Process</span>
-          <h2>A structured approach to engineering excellence.</h2>
-          <p>From the first site inspection to long-term maintenance, we ensure every step is handled with technical precision.</p>
-        </div>
-        
-        <div class="process-timeline reveal">
-          <div class="process-step">
-            <div class="step-number">01</div>
-            <h3>Inspection</h3>
-            <p>Comprehensive site survey and technical assessment.</p>
-          </div>
-          <div class="process-step">
-            <div class="step-number">02</div>
-            <h3>Quotation</h3>
-            <p>Transparent cost breakdown and system design.</p>
-          </div>
-          <div class="process-step">
-            <div class="step-number">03</div>
-            <h3>Installation</h3>
-            <p>Safety-led execution by experienced technicians.</p>
-          </div>
-          <div class="process-step">
-            <div class="step-number">04</div>
-            <h3>Testing</h3>
-            <p>Rigorous commissioning and quality checks.</p>
-          </div>
-          <div class="process-step">
-            <div class="step-number">05</div>
-            <h3>Maintenance</h3>
-            <p>Preventive support to ensure system longevity.</p>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -269,464 +182,97 @@
       <div class="section-shell">
         <div class="section-heading reveal">
           <span class="eyebrow">Core Services</span>
-          <h2>Integrated engineering services for reliable properties and resilient energy.</h2>
-          <p>Clean installations, structured maintenance, and responsive fault resolution for homes, businesses, and industrial facilities.</p>
+          <h2>Core services that matter most to clients.</h2>
+          <p>We focus the homepage on the work people ask for most so the message stays clear and easy to remember.</p>
         </div>
 
         <div class="services__grid">
           <article class="service-card reveal">
-            <span class="material-symbols-outlined" aria-hidden="true">mode_fan</span>
-            <h3>HVAC Installation &amp; Maintenance</h3>
-            <p>Air-conditioning design support, installation, servicing, and performance checks.</p>
+            <span class="service-card__arrow" aria-hidden="true">&rarr;</span>
+            <h3>Industrial Automation</h3>
+            <p>Line control, machine logic, and automation that improves operational consistency.</p>
+            <ul>
+              <li>PLC programming</li>
+              <li>Process control</li>
+              <li>Commissioning</li>
+            </ul>
+            <a href="#contact">Learn More <span aria-hidden="true">&rarr;</span></a>
           </article>
           <article class="service-card reveal">
-            <span class="material-symbols-outlined" aria-hidden="true">solar_power</span>
-            <h3>Solar System Installation</h3>
-            <p>Solar panels, inverters, batteries, protections, and clean commissioning.</p>
+            <span class="service-card__arrow" aria-hidden="true">&rarr;</span>
+            <h3>PLC &amp; SCADA Integration</h3>
+            <p>Integration and visualization for teams that need dependable monitoring and control.</p>
+            <ul>
+              <li>Remote monitoring</li>
+              <li>Alarm mapping</li>
+              <li>System tuning</li>
+            </ul>
+            <a href="#contact">Learn More <span aria-hidden="true">&rarr;</span></a>
           </article>
           <article class="service-card reveal">
-            <span class="material-symbols-outlined" aria-hidden="true">settings_backup_restore</span>
-            <h3>Solar Maintenance &amp; Repairs</h3>
-            <p>System inspections, battery checks, inverter troubleshooting, and repairs.</p>
+            <span class="service-card__arrow" aria-hidden="true">&rarr;</span>
+            <h3>Control Panels</h3>
+            <p>Neat panel builds, structured wiring, labelling, and commissioning-ready layouts.</p>
+            <ul>
+              <li>Distribution boards</li>
+              <li>Motor starters</li>
+              <li>Protection devices</li>
+            </ul>
+            <a href="#contact">Learn More <span aria-hidden="true">&rarr;</span></a>
           </article>
           <article class="service-card reveal">
-            <span class="material-symbols-outlined" aria-hidden="true">bolt</span>
-            <h3>Electrical Installations</h3>
-            <p>Electrical works, upgrades, fault isolation, distribution boards, and wiring support.</p>
+            <span class="service-card__arrow" aria-hidden="true">&rarr;</span>
+            <h3>Solar Energy</h3>
+            <p>Solar sizing, installation, battery backup, and maintenance for dependable power.</p>
+            <ul>
+              <li>Hybrid systems</li>
+              <li>Battery banks</li>
+              <li>Inverter support</li>
+            </ul>
+            <a href="solar.html">Learn More <span aria-hidden="true">&rarr;</span></a>
           </article>
           <article class="service-card reveal">
-            <span class="material-symbols-outlined" aria-hidden="true">hvac</span>
-            <h3>Industrial HVAC Equipment Repairs</h3>
-            <p>Technical repairs for commercial and industrial cooling and ventilation equipment.</p>
-          </article>
-          <article class="service-card reveal">
-            <span class="material-symbols-outlined" aria-hidden="true">plumbing</span>
-            <h3>Plumbing &amp; Pipe Work</h3>
-            <p>Pipe installations, repairs, water systems, leak correction, and service plumbing.</p>
-          </article>
-          <article class="service-card reveal">
-            <span class="material-symbols-outlined" aria-hidden="true">construction</span>
-            <h3>Building Construction</h3>
-            <p>Building works, renovations, project support, and construction maintenance.</p>
-          </article>
-          <article class="service-card reveal">
-            <span class="material-symbols-outlined" aria-hidden="true">water_heater</span>
-            <h3>Geyser Installation</h3>
-            <p>Electric and solar geyser installation, repair, safety checks, and replacement.</p>
-          </article>
-          <article class="service-card reveal">
-            <span class="material-symbols-outlined" aria-hidden="true">engineering</span>
-            <h3>Preventive Maintenance Services</h3>
-            <p>Scheduled technical checks that protect assets and reduce emergency repair costs.</p>
-          </article>
-          <article class="service-card reveal">
-            <span class="material-symbols-outlined" aria-hidden="true">build</span>
-            <h3>Fault Finding &amp; Diagnostics</h3>
-            <p>Structured diagnosis for electrical, solar, HVAC, plumbing, and equipment faults.</p>
+            <span class="service-card__arrow" aria-hidden="true">&rarr;</span>
+            <h3>Electrical Engineering</h3>
+            <p>Installations, upgrades, diagnostics, and maintenance for dependable electrical systems.</p>
+            <ul>
+              <li>Wiring</li>
+              <li>DB upgrades</li>
+              <li>Fault repairs</li>
+            </ul>
+            <a href="electrical.html">Learn More <span aria-hidden="true">&rarr;</span></a>
           </article>
         </div>
-      </div>
-    </section>
-
-    <section class="section industries" id="industries">
-      <div class="section-shell">
-        <div class="section-heading reveal">
-          <span class="eyebrow">Industries We Serve</span>
-          <h2>Specialized engineering for diverse environments.</h2>
-        </div>
-        <div class="industries-grid reveal">
-          <div class="industry-card">
-            <span class="material-symbols-outlined">home</span>
-            <h3>Residential</h3>
-            <p>Homes, apartments, and private estates.</p>
-          </div>
-          <div class="industry-card">
-            <span class="material-symbols-outlined">apartment</span>
-            <h3>Commercial</h3>
-            <p>Offices, retail centers, and hotels.</p>
-          </div>
-          <div class="industry-card">
-            <span class="material-symbols-outlined">factory</span>
-            <h3>Industrial</h3>
-            <p>Warehouses, factories, and mines.</p>
-          </div>
-          <div class="industry-card">
-            <span class="material-symbols-outlined">local_hospital</span>
-            <h3>Healthcare</h3>
-            <p>Hospitals and medical clinics.</p>
-          </div>
-          <div class="industry-card">
-            <span class="material-symbols-outlined">school</span>
-            <h3>Education</h3>
-            <p>Schools, colleges, and universities.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section safety" id="safety">
-      <div class="section-shell safety__grid">
-        <div class="section-copy reveal">
-          <span class="eyebrow">Safety First</span>
-          <h2>Zero-Compromise Engineering Safety</h2>
-          <p>Our engineering practices are built around the strict safety protocols of Zambia's industrial and construction sectors. Every technician is equipped and trained for high-risk environments.</p>
-          <ul class="safety-list">
-            <li><span class="material-symbols-outlined">check_circle</span> PPE-first site conduct</li>
-            <li><span class="material-symbols-outlined">check_circle</span> Supervisor-led inspections</li>
-            <li><span class="material-symbols-outlined">check_circle</span> Practical risk assessments</li>
-            <li><span class="material-symbols-outlined">check_circle</span> Equipment condition checks</li>
-          </ul>
-        </div>
-        <div class="safety__visual reveal">
-          <div class="safety-badge">
-            <span class="material-symbols-outlined" aria-hidden="true">verified_user</span>
-            <strong>Safety-Led Work</strong>
-            <small>Health, safety, and environment focused</small>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section certifications" id="certifications">
-      <div class="section-shell">
-        <div class="section-heading reveal">
-          <span class="eyebrow">Compliance Controls</span>
-          <h2>Quality checks that support safer technical handovers.</h2>
-        </div>
-        <div class="cert-grid reveal">
-          <div class="cert-item"><span>Electrical Safety Checks</span></div>
-          <div class="cert-item"><span>Site Risk Review</span></div>
-          <div class="cert-item"><span>QA Handover Notes</span></div>
-          <div class="cert-item"><span>Maintenance Records</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section equipment" id="equipment">
-      <div class="section-shell">
-        <div class="section-heading reveal">
-          <span class="eyebrow">Equipment We Work With</span>
-          <h2>Technical familiarity across modern energy and building systems.</h2>
-          <p>Support for common residential, commercial, and light industrial equipment used across Zambia.</p>
-        </div>
-
-        <div class="equipment-grid reveal">
-          <article><span class="material-symbols-outlined">battery_charging_full</span><strong>LuxpowerTek</strong><small>Hybrid inverter systems</small></article>
-          <article><span class="material-symbols-outlined">mode_fan</span><strong>Split Systems</strong><small>Residential and office cooling</small></article>
-          <article><span class="material-symbols-outlined">hvac</span><strong>Ducted HVAC</strong><small>Commercial air distribution</small></article>
-          <article><span class="material-symbols-outlined">battery_5_bar</span><strong>Lithium Batteries</strong><small>Backup and solar storage</small></article>
-          <article><span class="material-symbols-outlined">solar_power</span><strong>Solar Inverters</strong><small>Hybrid and backup power</small></article>
-          <article><span class="material-symbols-outlined">precision_manufacturing</span><strong>Recovery Units</strong><small>HVAC service equipment</small></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section why">
-      <div class="section-shell why__grid">
-        <div class="section-copy reveal">
-          <span class="eyebrow">Why Choose Us</span>
-          <h2>Technical discipline, immediate response, and workmanship clients can trust.</h2>
-          <p>
-            Controltek combines qualified site teams with a practical understanding of Zambia's residential,
-            commercial, and industrial service needs.
-          </p>
-          <a class="btn btn--primary" href="#contact">
-            <span class="material-symbols-outlined" aria-hidden="true">support_agent</span>
-            Book Technical Support
-          </a>
-        </div>
-
-        <div class="why__list reveal">
-          <article>
-            <span class="material-symbols-outlined" aria-hidden="true">badge</span>
-            <div>
-              <h3>Qualified technicians</h3>
-              <p>Experienced teams for HVAC, solar, electrical, construction, and plumbing work.</p>
-            </div>
-          </article>
-          <article>
-            <span class="material-symbols-outlined" aria-hidden="true">acute</span>
-            <div>
-              <h3>Immediate response</h3>
-              <p>Clear communication and responsive service for urgent technical issues.</p>
-            </div>
-          </article>
-          <article>
-            <span class="material-symbols-outlined" aria-hidden="true">verified_user</span>
-            <div>
-              <h3>Reliable workmanship</h3>
-              <p>Installations and repairs carried out with careful inspection and clean finishing.</p>
-            </div>
-          </article>
-          <article>
-            <span class="material-symbols-outlined" aria-hidden="true">apartment</span>
-            <div>
-              <h3>Commercial &amp; residential support</h3>
-              <p>Solutions tailored to homes, offices, retail facilities, and operational sites.</p>
-            </div>
-          </article>
-          <article>
-            <span class="material-symbols-outlined" aria-hidden="true">travel_explore</span>
-            <div>
-              <h3>Nationwide support</h3>
-              <p>Service capacity for clients across Lusaka and wider Zambia.</p>
-            </div>
-          </article>
-          <article>
-            <span class="material-symbols-outlined" aria-hidden="true">health_and_safety</span>
-            <div>
-              <h3>Safety-focused engineering practices</h3>
-              <p>Practical site controls, technical checks, and safety-minded handovers.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-band reveal">
-      <div class="section-shell cta-band__inner">
-        <div>
-          <span class="eyebrow">Prevent downtime</span>
-          <h2>Need a technician for HVAC, solar, electrical, plumbing, or building works?</h2>
-        </div>
-        <a class="btn btn--light" href="https://wa.me/260978245904?text=Hello%20Controltek%20Services%2C%20I%20would%20like%20to%20request%20technical%20support." target="_blank" rel="noopener">
-          <span class="material-symbols-outlined" aria-hidden="true">chat</span>
-          WhatsApp Us
-        </a>
-        <button class="btn btn--light quote-trigger" type="button">
-          <span class="material-symbols-outlined" aria-hidden="true">request_quote</span>
-          Request Quotation
-        </button>
       </div>
     </section>
 
     <section class="section projects" id="projects">
       <div class="section-shell">
         <div class="section-heading reveal">
-          <span class="eyebrow">Project Showcase</span>
-          <h2>Practical field work across energy, HVAC, electrical, and construction environments.</h2>
-          <p>Real project visuals from installations, maintenance visits, repairs, and technical site work.</p>
+          <span class="eyebrow">Featured Projects</span>
+          <h2>A small set of projects that show the quality of our work.</h2>
+          <p>Each card highlights a core capability so the homepage stays focused and easy to scan.</p>
         </div>
 
         <div class="projects__grid">
           <article class="project-card project-card--wide reveal">
             <img src="Assets/639150536_122174072924752665_6450804661900491813_n.jpg" alt="Ground mounted solar panel installation" />
             <div>
-              <span>Solar Energy</span>
-              <h3>Solar inverter and panel installations</h3>
+              <span>Mining Automation</span>
+              <h3>PLC and solar support for high-demand sites</h3>
+              <p>Integrated field work for power reliability, process control, and uptime.</p>
+              <a href="#contact">Read Case Study &rarr;</a>
             </div>
           </article>
           <article class="project-card reveal">
-            <img src="Assets/679924585_122182130414752665_1647554920923825024_n.jpg" alt="Air-conditioning units installed outside a building" />
-            <div>
-              <span>HVAC</span>
-              <h3>Air-condition installations</h3>
-            </div>
-          </article>
-          <article class="project-card reveal">
-            <img src="Assets/637915777_122174073098752665_5136957511916690828_n.jpg" alt="Technician working on an inverter and electrical installation" />
-            <div>
-              <span>Electrical</span>
-              <h3>Electrical maintenance projects</h3>
-            </div>
-          </article>
-          <article class="project-card reveal">
-            <img src="Assets/690749381_122184010670752665_1798553602882575421_n.jpg" alt="Construction workers loading building materials" />
-            <div>
-              <span>Construction</span>
-              <h3>Construction support works</h3>
-            </div>
-          </article>
-          <article class="project-card reveal">
-            <img src="Assets/619851383_122170756070752665_6607876470128424524_n.jpg" alt="Ceiling mounted HVAC equipment being serviced" />
-            <div>
-              <span>Maintenance</span>
-              <h3>HVAC servicing and inspections</h3>
-            </div>
-          </article>
-          <article class="project-card project-card--wide reveal">
             <img src="Assets/689459422_122184010568752665_5711642186320111911_n.jpg" alt="Solar inverter and battery backup system" />
             <div>
               <span>Backup Power</span>
-              <h3>Battery and inverter systems</h3>
+              <h3>Battery and inverter systems for resilient operations</h3>
+              <p>Hybrid power solutions that protect clients from downtime and instability.</p>
+              <a href="#contact">Read Case Study &rarr;</a>
             </div>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section maintenance" id="maintenance">
-      <div class="section-shell maintenance__grid">
-        <div class="maintenance__image reveal">
-          <img src="Assets/670788803_122181007688752665_9161803868854722833_n.jpg" alt="Technicians servicing air-conditioning equipment" />
-        </div>
-
-        <div class="section-copy reveal">
-          <span class="eyebrow">Maintenance Plans</span>
-          <h2>Preventive Maintenance is Cheaper than Corrective Maintenance</h2>
-          <p>
-            Scheduled inspections help identify performance issues early, protect equipment life,
-            and reduce the cost of emergency repairs.
-          </p>
-          <div class="plans">
-            <article>
-              <span class="material-symbols-outlined" aria-hidden="true">mode_fan</span>
-              <div>
-                <h3>Air-conditioning systems</h3>
-                <p>Coil cleaning, gas checks, electrical inspections, drainage, and performance testing.</p>
-              </div>
-            </article>
-            <article>
-              <span class="material-symbols-outlined" aria-hidden="true">solar_power</span>
-              <div>
-                <h3>Solar systems</h3>
-                <p>Panel cleaning, inverter checks, battery health, protection testing, and reporting.</p>
-              </div>
-            </article>
-            <article>
-              <span class="material-symbols-outlined" aria-hidden="true">bolt</span>
-              <div>
-                <h3>Electrical systems</h3>
-                <p>Load checks, board inspections, cable integrity, earthing, and fault prevention.</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section before-after" id="showcase">
-      <div class="section-shell">
-        <div class="section-heading reveal">
-          <span class="eyebrow">Transformation</span>
-          <h2>Installation Showcase</h2>
-          <p>Visualizing the difference our engineering solutions make on site.</p>
-        </div>
-        <div class="ba-grid reveal">
-          <div class="ba-item">
-            <div class="ba-image">
-              <img src="Assets/619851383_122170756070752665_6607876470128424524_n.jpg" alt="Before">
-              <span>Before</span>
-            </div>
-            <div class="ba-image">
-              <img src="Assets/611945073_122168276774752665_838514749293394637_n.jpg" alt="After">
-              <span>After</span>
-            </div>
-            <div class="ba-info">
-              <h3>Solar Integration</h3>
-              <p>Upgrading a residential site from grid-only to hybrid solar backup.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section testimonials">
-      <div class="section-shell">
-        <div class="section-heading reveal">
-          <span class="eyebrow">Client Feedback</span>
-          <h2>Trusted by property owners, businesses, and project teams.</h2>
-        </div>
-
-        <div class="testimonials__grid">
-          <article class="testimonial reveal">
-            <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p>"The team handled our air-conditioning maintenance professionally and explained the issues clearly before repair."</p>
-            <strong>Facilities Manager</strong>
-            <small>Lusaka commercial client</small>
-          </article>
-          <article class="testimonial reveal">
-            <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p>"Controltek delivered a neat solar inverter installation and left the system well labelled and easy to manage."</p>
-            <strong>Homeowner</strong>
-            <small>Woodlands, Lusaka</small>
-          </article>
-          <article class="testimonial reveal">
-            <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p>"Reliable response, tidy workmanship, and practical advice. They have become our first call for technical maintenance."</p>
-            <strong>Operations Lead</strong>
-            <small>Residential estate support</small>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section calculators" id="calculators">
-      <div class="section-shell">
-        <div class="section-heading reveal">
-          <span class="eyebrow">Engineering Tools</span>
-          <h2>Interactive Service Calculators</h2>
-          <p>Estimate your requirements for solar energy, air-conditioning, and electrical loads.</p>
-        </div>
-
-        <div class="calculators-grid reveal">
-          <!-- Solar Calculator -->
-          <div class="calc-card glass-card">
-            <div class="calc-header">
-              <span class="material-symbols-outlined">solar_power</span>
-              <h3>Solar Sizing</h3>
-            </div>
-            <div class="calc-body">
-              <div class="form-row">
-                <label>Daily Load (kWh)</label>
-                <input type="number" id="solarLoad" placeholder="e.g. 10" step="0.1">
-              </div>
-              <div class="form-row">
-                <label>Backup Days</label>
-                <input type="number" id="solarBackup" value="1">
-              </div>
-              <button class="btn btn--primary btn--wide" id="calcSolar">Calculate</button>
-              <div class="calc-result" id="solarResult"></div>
-            </div>
-          </div>
-
-          <!-- HVAC Calculator -->
-          <div class="calc-card glass-card">
-            <div class="calc-header">
-              <span class="material-symbols-outlined">hvac</span>
-              <h3>BTU Estimator</h3>
-            </div>
-            <div class="calc-body">
-              <div class="form-row">
-                <label>Room Area (sq.m)</label>
-                <input type="number" id="hvacArea" placeholder="e.g. 25">
-              </div>
-              <div class="form-row">
-                <label>Insulation Level</label>
-                <select id="hvacInsulation">
-                  <option value="1">Standard</option>
-                  <option value="1.2">Poor</option>
-                  <option value="0.8">Excellent</option>
-                </select>
-              </div>
-              <button class="btn btn--primary btn--wide" id="calcHVAC">Calculate</button>
-              <div class="calc-result" id="hvacResult"></div>
-            </div>
-          </div>
-
-          <!-- Electrical Load Calculator -->
-          <div class="calc-card glass-card">
-            <div class="calc-header">
-              <span class="material-symbols-outlined">bolt</span>
-              <h3>Load Estimator</h3>
-            </div>
-            <div class="calc-body">
-              <div class="form-row">
-                <label>Number of Rooms</label>
-                <input type="number" id="elecRooms" placeholder="e.g. 4">
-              </div>
-              <div class="form-row">
-                <label>Main Appliances</label>
-                <div class="checkbox-group">
-                  <label><input type="checkbox" class="appliance" value="2000"> AC Unit</label>
-                  <label><input type="checkbox" class="appliance" value="3000"> Geyser</label>
-                  <label><input type="checkbox" class="appliance" value="1500"> Stove</label>
-                </div>
-              </div>
-              <button class="btn btn--primary btn--wide" id="calcElec">Calculate</button>
-              <div class="calc-result" id="elecResult"></div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -734,23 +280,16 @@
     <section class="section contact" id="contact">
       <div class="section-shell contact__grid">
         <div class="contact__details reveal">
-          <span class="eyebrow">Contact Controltek</span>
-          <h2>Request a service visit or technical quotation.</h2>
-          <p>Send the details of your project, site issue, or maintenance requirement and our team will respond with the next steps.</p>
+          <span class="eyebrow">Contact</span>
+          <h2>Request a service visit or quotation.</h2>
+          <p>Send the basics and we will respond with the next steps.</p>
 
           <div class="contact-card">
             <article>
               <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
               <div>
-                <strong>Address</strong>
-                <a href="https://www.google.com/maps/search/?api=1&query=3B%20Ntoyo%20Road%2C%20Woodlands%2C%20Lusaka" target="_blank" rel="noopener">3B Ntoyo Road, Woodlands, Lusaka</a>
-              </div>
-            </article>
-            <article>
-              <span class="material-symbols-outlined" aria-hidden="true">call</span>
-              <div>
-                <strong>Phone</strong>
-                <a href="tel:+260978245904">+260 978245904</a>
+                <strong>Visit us</strong>
+                <p>3B Ntoyo Road, Woodlands, Lusaka, Zambia</p>
               </div>
             </article>
             <article>
@@ -761,21 +300,21 @@
               </div>
             </article>
             <article>
-              <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
+              <span class="material-symbols-outlined" aria-hidden="true">call</span>
               <div>
-                <strong>Business Hours</strong>
-                <p>Mon - Sat: 08:00 - 17:30</p>
+                <strong>Phone</strong>
+                <a href="tel:+260978245904">+260 978 245904</a>
               </div>
             </article>
           </div>
 
-          <a class="btn btn--primary btn--wide" href="https://wa.me/260978245904?text=Hello%20Controltek%20Services%2C%20I%20would%20like%20to%20request%20a%20service." target="_blank" rel="noopener">
-            <span class="material-symbols-outlined" aria-hidden="true">chat</span>
-            WhatsApp Contact
-          </a>
+          <button class="btn btn--primary btn--wide quote-trigger" type="button">
+            <span class="material-symbols-outlined" aria-hidden="true">assignment</span>
+            Request Quotation
+          </button>
         </div>
 
-        <form class="contact-form reveal" id="contactForm">
+        <form class="contact-form surface-card reveal" id="contactForm">
           <div class="form-row">
             <label for="name">Full Name</label>
             <input id="name" name="name" type="text" placeholder="Your name" required />
@@ -788,13 +327,14 @@
             <label for="service">Service Needed</label>
             <select id="service" name="service" required>
               <option value="">Select service</option>
-              <option>HVAC Installation & Maintenance</option>
-              <option>Solar System Installation</option>
-              <option>Electrical Installations</option>
-              <option>Plumbing & Pipe Work</option>
-              <option>Building Construction</option>
-              <option>Preventive Maintenance</option>
-              <option>Fault Finding & Diagnostics</option>
+              <option>Industrial Automation</option>
+              <option>PLC &amp; SCADA Integration</option>
+              <option>Control Panels</option>
+              <option>HVAC Systems</option>
+              <option>Solar Energy</option>
+              <option>Electrical Engineering</option>
+              <option>Plumbing Solutions</option>
+              <option>Construction Support</option>
             </select>
           </div>
           <div class="form-row">
@@ -804,29 +344,26 @@
           <div class="form-row">
             <label for="projectFiles">Project Images</label>
             <input id="projectFiles" name="projectFiles" type="file" accept="image/*,.pdf" multiple />
-            <small class="field-hint">Attach site photos or a PDF scope. Email apps may require adding the files manually.</small>
           </div>
-          <button class="btn btn--primary" type="submit">
-            <span class="material-symbols-outlined" aria-hidden="true">send</span>
-            Send Request
-          </button>
+          <button class="btn btn--primary btn--wide" type="submit">Send Request</button>
           <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
         </form>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">
     <div class="section-shell footer__grid">
       <div>
         <a class="brand brand--footer" href="#home" aria-label="Controltek Services Limited home">
-          <img src="Assets/logo.jpg" alt="Controltek Services Limited logo" />
+          <img src="Assets/logo.png" alt="Controltek Services Limited logo" />
           <span>
             <strong>Controltek</strong>
             <small>Services Limited</small>
           </span>
         </a>
-        <p>Reliable Engineering Solutions Built for Zambia</p>
+        <p>Industrial Control Systems, Automation, and Electrical Solutions for Zambia.</p>
         <div class="social-links" aria-label="Social media links">
           <a href="mailto:controltekservices3@gmail.com" aria-label="Email Controltek">
             <span class="material-symbols-outlined" aria-hidden="true">mail</span>
@@ -845,28 +382,28 @@
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#projects">Projects</a>
-        <a href="#maintenance">Maintenance Plans</a>
         <a href="#contact">Contact</a>
       </div>
 
       <div>
         <h3>Services</h3>
+        <a href="#services">Industrial Automation</a>
+        <a href="#services">PLC &amp; SCADA</a>
         <a href="#services">HVAC Systems</a>
-        <a href="#services">Solar Energy</a>
         <a href="#services">Electrical Engineering</a>
-        <a href="#services">Plumbing</a>
-        <a href="#services">Construction</a>
+        <a href="#services">Solar Energy</a>
       </div>
 
       <div>
-        <h3>Business Hours</h3>
-        <p>Monday - Saturday<br />08:00 - 17:30</p>
-        <p>Emergency response available by call or WhatsApp.</p>
+        <h3>Contact</h3>
+        <p>Lusaka, Zambia</p>
+        <p>controltekservices3@gmail.com</p>
+        <p>+260 978 245904</p>
       </div>
     </div>
 
     <div class="footer__bottom section-shell">
-      <span>© 2026 Controltek Services Limited. All rights reserved.</span>
+      <span>&copy; 2026 Controltek Services Limited. All rights reserved.</span>
       <a href="#home">Back to top</a>
     </div>
   </footer>
@@ -884,7 +421,7 @@
   </div>
 
   <div class="modal" id="quoteModal">
-    <div class="modal__content glass-card">
+    <div class="modal__content surface-card">
       <button class="modal__close" id="closeModal">&times;</button>
       <div class="section-heading">
         <span class="eyebrow">Quick Quote</span>

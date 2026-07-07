@@ -1,6 +1,4 @@
 (function () {
-  const body = document.body;
-  const preloader = document.getElementById("preloader");
   const header = document.getElementById("siteHeader");
   const navToggle = document.getElementById("navToggle");
   const nav = document.getElementById("siteNav");
@@ -15,21 +13,6 @@
   const ctx = canvas ? canvas.getContext("2d") : null;
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  body.classList.add("is-loading");
-
-  let loaderHidden = false;
-  const hidePreloader = () => {
-    if (loaderHidden) return;
-    loaderHidden = true;
-    preloader?.classList.add("is-hidden");
-    body.classList.remove("is-loading");
-  };
-
-  window.addEventListener("load", () => {
-    window.setTimeout(hidePreloader, 550);
-  });
-  window.setTimeout(hidePreloader, 1600);
-
   let lastScrollY = window.scrollY;
   const backToTop = document.getElementById("backToTop");
 
@@ -39,16 +22,8 @@
     // Sticky state
     header?.classList.toggle("is-scrolled", currentScrollY > 24);
     
-    // Smart hide/show
-    if (currentScrollY > 150) {
-      if (currentScrollY > lastScrollY) {
-        header?.classList.add("is-hidden");
-      } else {
-        header?.classList.remove("is-hidden");
-      }
-    } else {
-      header?.classList.remove("is-hidden");
-    }
+    // Keep header visible
+    header?.classList.remove("is-hidden");
     
     // Back to top
     backToTop?.classList.toggle("is-visible", currentScrollY > 500);
