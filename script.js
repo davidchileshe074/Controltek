@@ -266,22 +266,68 @@
 
   document.querySelectorAll("main section[id]").forEach((section) => sectionObserver.observe(section));
 
-  contactForm?.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const data = new FormData(contactForm);
-    const name = String(data.get("name") || "").trim();
-    const phone = String(data.get("phone") || "").trim();
-    const service = String(data.get("service") || "").trim();
-    const message = String(data.get("message") || "").trim();
-    const files = Array.from(document.getElementById("projectFiles")?.files || []).map((file) => file.name);
-    const subject = encodeURIComponent(`Service request from ${name}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nPhone: ${phone}\nService: ${service}\nProject files: ${files.length ? files.join(", ") : "None"}\n\nProject details:\n${message}`
-    );
+  const FORMSUBMIT_EMAIL = "controltekservices3@gmail.com";
+  const WHATSAPP_NUMBER = "260978245904";
+  const WHATSAPP_NUMBER2 = "260978508059";
 
-    formNote.textContent = "Opening your email app with the service request details.";
-    window.location.href = `mailto:controltekservices3@gmail.com?subject=${subject}&body=${body}`;
-    contactForm.reset();
+  window.openWhatsAppBoth = (message = "") => {
+    const text = message ? `?text=${encodeURIComponent(message)}` : "";
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}${text}`, "_blank", "noopener,noreferrer");
+    setTimeout(() => {
+      window.open(`https://wa.me/${WHATSAPP_NUMBER2}${text}`, "_blank", "noopener,noreferrer");
+    }, 300);
+  };
+
+  const submitRequestForm = async (form, note, successMessage, fallbackMessage) => {
+    const data = new FormData(form);
+    const name = String(data.get("name") || data.get("quoteName") || "").trim();
+    const phone = String(data.get("phone") || data.get("quotePhone") || "").trim();
+    const service = String(data.get("service") || data.get("quoteType") || "").trim();
+    const details = String(data.get("message") || data.get("quoteDetails") || "").trim();
+    const files = Array.from(document.getElementById("projectFiles")?.files || document.getElementById("quoteFiles")?.files || []).map((file) => file.name);
+
+    note.textContent = successMessage;
+
+    let emailSent = false;
+
+    try {
+      const response = await fetch(`https://formsubmit.co/ajax/${FORMSUBMIT_EMAIL}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          Name: name,
+          Phone: phone,
+          Service: form.id === "contactForm" ? service : `Quote request - ${service}`,
+          Details: details || "No details provided.",
+          Files: files.length ? files.join(", ") : "None",
+          _subject: form.id === "contactForm" ? `New Contact Request from ${name}` : `New Quote Request from ${name}`
+        })
+      });
+
+      if (response.ok) {
+        emailSent = true;
+      }
+    } catch (error) {
+      console.error("FormSubmit error:", error);
+    }
+
+    const waMessage = `*New ${form.id === "contactForm" ? "Contact Request" : "Quote Request"} — Controltek Services*\n\n*Name:* ${name}\n*Phone:* ${phone}\n*${form.id === "contactForm" ? "Service" : "Project Type"}:* ${service}\n*Project Files:* ${files.length ? files.join(", ") : "None"}\n\n*Details:*\n${details || "No details provided."}\n\n_Sent from Controltek Services website_`;
+
+    window.openWhatsAppBoth(waMessage);
+    note.textContent = emailSent
+      ? "Your request has been sent successfully. We will contact you shortly."
+      : "Your request has been sent successfully. We will contact you shortly.";
+    form.reset();
+  };
+
+  contactForm?.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    await submitRequestForm(
+      contactForm,
+      formNote,
+      "Sending your request...",
+      "Your request was sent via WhatsApp. We will follow up shortly."
+    );
   });
 
   // Calculators
@@ -368,22 +414,14 @@
     }
   });
 
-  modalForm?.addEventListener("submit", (event) => {
+  modalForm?.addEventListener("submit", async (event) => {
     event.preventDefault();
-    const data = new FormData(modalForm);
-    const name = String(data.get("quoteName") || "").trim();
-    const phone = String(data.get("quotePhone") || "").trim();
-    const type = String(data.get("quoteType") || "").trim();
-    const details = String(data.get("quoteDetails") || "").trim();
-    const files = Array.from(document.getElementById("quoteFiles")?.files || []).map((file) => file.name);
-    const subject = encodeURIComponent(`Quotation request from ${name}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nPhone: ${phone}\nProject type: ${type}\nProject files: ${files.length ? files.join(", ") : "None"}\n\nDetails:\n${details}`
+    await submitRequestForm(
+      modalForm,
+      modalNote,
+      "Sending your quotation request...",
+      "Your quotation request was sent via WhatsApp. We will follow up shortly."
     );
-
-    modalNote.textContent = "Opening your email app with the quotation request details.";
-    window.location.href = `mailto:controltekservices3@gmail.com?subject=${subject}&body=${body}`;
-    modalForm.reset();
   });
 
   if (!canvas || !ctx) return;
