@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800;900&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,300..700,0..1,-50..200&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="preload" as="image" href="Assets/solar project.jpg" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -45,8 +46,8 @@
     <nav class="site-nav" id="siteNav" aria-label="Primary navigation">
       <a href="#about">About</a>
       <div class="nav-item has-dropdown">
-        <a href="#services">Services <span class="material-symbols-outlined">expand_more</span></a>
-        <div class="mega-menu">
+        <a href="solar.html">Energy Solutions <span class="material-symbols-outlined">expand_more</span></a>
+        <div class="mega-menu mega-menu--energy">
           <div class="mega-menu__grid">
             <div class="mega-menu__col">
               <h4>Energy Solutions</h4>
@@ -54,12 +55,26 @@
               <a href="solar.html"><span class="material-symbols-outlined">battery_charging_full</span> Battery Backup</a>
               <a href="solar.html"><span class="material-symbols-outlined">settings_backup_restore</span> Solar Maintenance</a>
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item has-dropdown">
+        <a href="hvac.html">HVAC &amp; Climate <span class="material-symbols-outlined">expand_more</span></a>
+        <div class="mega-menu mega-menu--compact">
+          <div class="mega-menu__grid">
             <div class="mega-menu__col">
               <h4>HVAC &amp; Climate</h4>
               <a href="hvac.html"><span class="material-symbols-outlined">mode_fan</span> Air Conditioning</a>
               <a href="hvac.html"><span class="material-symbols-outlined">hvac</span> Industrial Cooling</a>
               <a href="hvac.html"><span class="material-symbols-outlined">thermostat</span> Ventilation</a>
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item has-dropdown">
+        <a href="electrical.html">Engineering <span class="material-symbols-outlined">expand_more</span></a>
+        <div class="mega-menu mega-menu--compact">
+          <div class="mega-menu__grid">
             <div class="mega-menu__col">
               <h4>Engineering</h4>
               <a href="electrical.html"><span class="material-symbols-outlined">bolt</span> Electrical Works</a>
@@ -87,10 +102,18 @@
 
   <main>
     <section class="hero" id="home">
+      <div class="hero__backgrounds" aria-hidden="true">
+        <div class="hero__background-track">
+          <div class="hero__background-slide" data-title="Power your site with confidence" data-caption="Clean solar installations that cut downtime and keep critical systems running." style="background-image: url('Assets/solar project.jpg');"></div>
+          <div class="hero__background-slide" data-title="Keep projects moving" data-caption="Responsive site work, safety, and coordination that helps deadlines stay on track." style="background-image: url('Assets/project in progress.jpg');"></div>
+          <div class="hero__background-slide" data-title="Upgrade with confidence" data-caption="Neat panel layouts and reliable solar upgrades built for long-term value." style="background-image: url('Assets/solar project 2.jpg');"></div>
+          <div class="hero__background-slide" data-title="Protect comfort and uptime" data-caption="HVAC support and maintenance that keeps your operations running smoothly." style="background-image: url('Assets/696749756_122184542282752665_1192581911254709376_n.jpg');"></div>
+          <div class="hero__background-slide" data-title="Electrical work that lasts" data-caption="Professional electrical and air-conditioning support finished cleanly and on time." style="background-image: url('Assets/696694166_122184565370752665_2373143901953688859_n.jpg');"></div>
+        </div>
+      </div>
       <div class="hero__blueprint" aria-hidden="true"></div>
       <div class="hero__glow hero__glow--one" aria-hidden="true"></div>
       <div class="hero__glow hero__glow--two" aria-hidden="true"></div>
-      <img class="hero__image" src="Assets/611945073_122168276774752665_838514749293394637_n.jpg" alt="Solar engineers working on a rooftop installation" fetchpriority="high" />
       <canvas class="hero__particles" id="particleCanvas" aria-hidden="true"></canvas>
       <div class="hero__overlay"></div>
 
@@ -99,16 +122,16 @@
           <h1>ControlTek builds smarter, safer, and more efficient operations for modern industries.</h1>
           <p>
             We deliver PLC programming, SCADA integration, control panels, HVAC, solar, and electrical services with
-            the discipline and clarity expected from a serious engineering partner.
+            disciplined execution and a clean handover.
           </p>
           <div class="hero__actions">
             <button class="btn btn--primary quote-trigger" type="button">
               <span class="material-symbols-outlined" aria-hidden="true">assignment</span>
               Request Quote
             </button>
-            <a class="btn btn--light" href="#projects">
-              <span class="material-symbols-outlined" aria-hidden="true">work</span>
-              View Projects
+            <a class="btn btn--light" href="#gallery">
+              <span class="material-symbols-outlined" aria-hidden="true">collections</span>
+              See Gallery
             </a>
           </div>
           <div class="hero__chips" aria-label="Core capabilities">
@@ -117,32 +140,93 @@
             <span>Control panels</span>
             <span>Lusaka, Zambia</span>
           </div>
-          <div class="hero__slider" aria-label="Selected project images">
-            <div class="hero__slider-track">
-              <figure class="hero__slide"><img src="Assets/611945073_122168276774752665_838514749293394637_n.jpg" alt="" /></figure>
-              <figure class="hero__slide"><img src="Assets/619851383_122170756070752665_6607876470128424524_n.jpg" alt="" /></figure>
-              <figure class="hero__slide"><img src="Assets/695807910_122184010622752665_1314205142785555688_n.jpg" alt="" /></figure>
-              <figure class="hero__slide"><img src="Assets/637915777_122174073098752665_5136957511916690828_n.jpg" alt="" /></figure>
-              <figure class="hero__slide"><img src="Assets/611945073_122168276774752665_838514749293394637_n.jpg" alt="" /></figure>
-              <figure class="hero__slide"><img src="Assets/619851383_122170756070752665_6607876470128424524_n.jpg" alt="" /></figure>
-              <figure class="hero__slide"><img src="Assets/695807910_122184010622752665_1314205142785555688_n.jpg" alt="" /></figure>
-              <figure class="hero__slide"><img src="Assets/637915777_122174073098752665_5136957511916690828_n.jpg" alt="" /></figure>
+          <div class="hero__gallery" aria-label="Featured project gallery">
+            <div class="hero__caption" aria-live="polite">
+              <span class="hero__caption-kicker">Why clients choose ControlTek</span>
+              <strong class="hero__caption-title">Power your site with confidence</strong>
+              <p class="hero__caption-text">Clean solar and technical installations that deliver dependable results and a professional handover.</p>
             </div>
+            <div class="hero__gallery-nav" aria-label="Gallery thumbnails"></div>
           </div>
         </div>
 
       </div>
     </section>
 
+    <section class="section gallery-section" id="gallery">
+      <div class="section-shell">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Project Gallery</span>
+          <h2>Recent work that shows the standard clients can expect.</h2>
+          <p>We keep the visuals focused on real installations, clean workmanship, and the kind of delivery that helps close the sale.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <figure class="gallery-card gallery-card--wide reveal">
+            <img src="Assets/solar project.jpg" alt="Solar installation on a rooftop" loading="lazy" decoding="async" />
+            <figcaption>
+              <span>Solar installation</span>
+              <strong>Power your operations with reliable solar design.</strong>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card reveal">
+            <img src="Assets/project in progress.jpg" alt="Technicians working on a project site" loading="lazy" decoding="async" />
+            <figcaption>
+              <span>Site execution</span>
+              <strong>Keep your project moving with disciplined field work.</strong>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card reveal">
+            <img src="Assets/solar project 2.jpg" alt="Solar panels installed on a roof" loading="lazy" decoding="async" />
+            <figcaption>
+              <span>Solar upgrade</span>
+              <strong>Clean layouts built for dependable long-term value.</strong>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card reveal">
+            <img src="Assets/696749756_122184542282752665_1192581911254709376_n.jpg" alt="HVAC technician performing maintenance" loading="lazy" decoding="async" />
+            <figcaption>
+              <span>HVAC support</span>
+              <strong>Protect comfort and uptime with responsive service.</strong>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card reveal">
+            <img src="Assets/696694166_122184565370752665_2373143901953688859_n.jpg" alt="Electrical and air conditioning support work" loading="lazy" decoding="async" />
+            <figcaption>
+              <span>Electrical support</span>
+              <strong>Professional support finished cleanly and on time.</strong>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card reveal">
+            <img src="Assets/611945073_122168276774752665_838514749293394637_n.jpg" alt="Solar engineers on a rooftop installation" loading="lazy" decoding="async" />
+            <figcaption>
+              <span>Field team</span>
+              <strong>Experience that builds confidence before the quote.</strong>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
     <section class="trusted-by reveal">
       <div class="section-shell">
-        <span class="trusted-by__label">Trusted by teams that value safe execution, technical clarity, and long-term reliability</span>
-        <div class="trusted-by__logos">
-          <div class="logo-item"><span>Mining</span></div>
-          <div class="logo-item"><span>Facilities</span></div>
-          <div class="logo-item"><span>Commercial</span></div>
-          <div class="logo-item"><span>Industrial</span></div>
-          <div class="logo-item"><span>Energy</span></div>
+        <span class="trusted-by__label">Why clients choose ControlTek</span>
+        <div class="trust-grid">
+          <article class="trust-card">
+            <span class="material-symbols-outlined" aria-hidden="true">assignment_turned_in</span>
+            <strong>Clear scopes</strong>
+            <p>Clients know what is being done, why it matters, and what the handover will include.</p>
+          </article>
+          <article class="trust-card">
+            <span class="material-symbols-outlined" aria-hidden="true">engineering</span>
+            <strong>Clean workmanship</strong>
+            <p>Site work is neat, structured, and finished with a professional eye for detail.</p>
+          </article>
+          <article class="trust-card">
+            <span class="material-symbols-outlined" aria-hidden="true">support_agent</span>
+            <strong>Practical support</strong>
+            <p>From first call to final sign-off, the team stays responsive and solution-focused.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -167,7 +251,7 @@
         </div>
 
         <div class="about__visual reveal">
-          <img src="Assets/695807910_122184010622752665_1314205142785555688_n.jpg" alt="Controltek technicians working on a construction project" />
+          <img src="Assets/695807910_122184010622752665_1314205142785555688_n.jpg" alt="Controltek technicians working on a construction project" loading="lazy" decoding="async" />
           <div class="about__badge">
             <span class="material-symbols-outlined" aria-hidden="true">engineering</span>
             <strong>Field-tested teams</strong>
@@ -178,30 +262,30 @@
       </div>
     </section>
 
-    <section class="section services" id="services">
+    <section class="section services" id="solutions">
       <div class="section-shell">
         <div class="section-heading reveal">
           <span class="eyebrow">Core Services</span>
-          <h2>Core services that matter most to clients.</h2>
-          <p>We focus the homepage on the work people ask for most so the message stays clear and easy to remember.</p>
+          <h2>Services designed to solve real operational problems.</h2>
+          <p>Each service is framed around the outcome clients want: fewer faults, cleaner systems, and smoother operations.</p>
         </div>
 
         <div class="services__grid">
           <article class="service-card reveal">
             <span class="service-card__arrow" aria-hidden="true">&rarr;</span>
             <h3>Industrial Automation</h3>
-            <p>Line control, machine logic, and automation that improves operational consistency.</p>
+            <p>Line control and machine logic built to improve consistency and reduce avoidable downtime.</p>
             <ul>
               <li>PLC programming</li>
-              <li>Process control</li>
-              <li>Commissioning</li>
+              <li>Process stability</li>
+              <li>Commissioning support</li>
             </ul>
             <a href="#contact">Learn More <span aria-hidden="true">&rarr;</span></a>
           </article>
           <article class="service-card reveal">
             <span class="service-card__arrow" aria-hidden="true">&rarr;</span>
             <h3>PLC &amp; SCADA Integration</h3>
-            <p>Integration and visualization for teams that need dependable monitoring and control.</p>
+            <p>Integration and monitoring that give teams clearer visibility and faster response.</p>
             <ul>
               <li>Remote monitoring</li>
               <li>Alarm mapping</li>
@@ -212,7 +296,7 @@
           <article class="service-card reveal">
             <span class="service-card__arrow" aria-hidden="true">&rarr;</span>
             <h3>Control Panels</h3>
-            <p>Neat panel builds, structured wiring, labelling, and commissioning-ready layouts.</p>
+            <p>Neat panel builds with structured wiring, labelling, and easier maintenance later on.</p>
             <ul>
               <li>Distribution boards</li>
               <li>Motor starters</li>
@@ -223,7 +307,7 @@
           <article class="service-card reveal">
             <span class="service-card__arrow" aria-hidden="true">&rarr;</span>
             <h3>Solar Energy</h3>
-            <p>Solar sizing, installation, battery backup, and maintenance for dependable power.</p>
+            <p>Solar sizing, installation, and backup systems that help keep power dependable.</p>
             <ul>
               <li>Hybrid systems</li>
               <li>Battery banks</li>
@@ -234,7 +318,7 @@
           <article class="service-card reveal">
             <span class="service-card__arrow" aria-hidden="true">&rarr;</span>
             <h3>Electrical Engineering</h3>
-            <p>Installations, upgrades, diagnostics, and maintenance for dependable electrical systems.</p>
+            <p>Installations, upgrades, and repairs that keep electrical systems safe and reliable.</p>
             <ul>
               <li>Wiring</li>
               <li>DB upgrades</li>
@@ -256,7 +340,7 @@
 
         <div class="projects__grid">
           <article class="project-card project-card--wide reveal">
-            <img src="Assets/639150536_122174072924752665_6450804661900491813_n.jpg" alt="Ground mounted solar panel installation" />
+            <img src="Assets/639150536_122174072924752665_6450804661900491813_n.jpg" alt="Ground mounted solar panel installation" loading="lazy" decoding="async" />
             <div>
               <span>Mining Automation</span>
               <h3>PLC and solar support for high-demand sites</h3>
@@ -265,7 +349,7 @@
             </div>
           </article>
           <article class="project-card reveal">
-            <img src="Assets/689459422_122184010568752665_5711642186320111911_n.jpg" alt="Solar inverter and battery backup system" />
+            <img src="Assets/689459422_122184010568752665_5711642186320111911_n.jpg" alt="Solar inverter and battery backup system" loading="lazy" decoding="async" />
             <div>
               <span>Backup Power</span>
               <h3>Battery and inverter systems for resilient operations</h3>
@@ -357,7 +441,7 @@
     <div class="section-shell footer__grid">
       <div>
         <a class="brand brand--footer" href="#home" aria-label="Controltek Services Limited home">
-          <img src="Assets/logo.png" alt="Controltek Services Limited logo" />
+          <img src="Assets/logo.png" alt="Controltek Services Limited logo" loading="eager" decoding="async" />
           <span>
             <strong>Controltek</strong>
             <small>Services Limited</small>
@@ -380,18 +464,18 @@
       <div>
         <h3>Quick Links</h3>
         <a href="#about">About</a>
-        <a href="#services">Services</a>
+        <a href="#solutions">Solutions</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </div>
 
       <div>
-        <h3>Services</h3>
-        <a href="#services">Industrial Automation</a>
-        <a href="#services">PLC &amp; SCADA</a>
-        <a href="#services">HVAC Systems</a>
-        <a href="#services">Electrical Engineering</a>
-        <a href="#services">Solar Energy</a>
+        <h3>Solutions</h3>
+        <a href="#solutions">Industrial Automation</a>
+        <a href="#solutions">PLC &amp; SCADA</a>
+        <a href="#solutions">HVAC Systems</a>
+        <a href="#solutions">Electrical Engineering</a>
+        <a href="#solutions">Solar Energy</a>
       </div>
 
       <div>
