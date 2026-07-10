@@ -84,6 +84,7 @@
           </div>
         </div>
       </div>
+      <a href="#gallery">Gallery</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -156,52 +157,87 @@
     <section class="section gallery-section" id="gallery">
       <div class="section-shell">
         <div class="section-heading reveal">
-          <span class="eyebrow">Project Gallery</span>
+          <span class="eyebrow">Gallery</span>
           <h2>Recent work that shows the standard clients can expect.</h2>
           <p>We keep the visuals focused on real installations, clean workmanship, and the kind of delivery that helps close the sale.</p>
         </div>
 
+        <div class="gallery-nav" aria-label="Gallery navigation">
+          <button type="button" class="gallery-nav__item is-active" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="gallery-nav__item" data-filter="solar" aria-pressed="false">Solar</button>
+          <button type="button" class="gallery-nav__item" data-filter="electrical" aria-pressed="false">Electrical</button>
+          <button type="button" class="gallery-nav__item" data-filter="hvac" aria-pressed="false">HVAC</button>
+        </div>
+
         <div class="gallery-grid">
-          <figure class="gallery-card gallery-card--wide reveal">
+          <figure class="gallery-card gallery-card--wide reveal" data-category="solar">
             <img src="Assets/solar project.jpg" alt="Solar installation on a rooftop" loading="lazy" decoding="async" />
             <figcaption>
               <span>Solar installation</span>
               <strong>Power your operations with reliable solar design.</strong>
             </figcaption>
           </figure>
-          <figure class="gallery-card reveal">
+          <figure class="gallery-card reveal" data-category="team">
             <img src="Assets/project in progress.jpg" alt="Technicians working on a project site" loading="lazy" decoding="async" />
             <figcaption>
               <span>Site execution</span>
               <strong>Keep your project moving with disciplined field work.</strong>
             </figcaption>
           </figure>
-          <figure class="gallery-card reveal">
+          <figure class="gallery-card reveal" data-category="solar">
             <img src="Assets/solar project 2.jpg" alt="Solar panels installed on a roof" loading="lazy" decoding="async" />
             <figcaption>
               <span>Solar upgrade</span>
               <strong>Clean layouts built for dependable long-term value.</strong>
             </figcaption>
           </figure>
-          <figure class="gallery-card reveal">
+          <figure class="gallery-card reveal" data-category="hvac">
             <img src="Assets/696749756_122184542282752665_1192581911254709376_n.jpg" alt="HVAC technician performing maintenance" loading="lazy" decoding="async" />
             <figcaption>
               <span>HVAC support</span>
               <strong>Protect comfort and uptime with responsive service.</strong>
             </figcaption>
           </figure>
-          <figure class="gallery-card reveal">
+          <figure class="gallery-card reveal" data-category="electrical">
             <img src="Assets/696694166_122184565370752665_2373143901953688859_n.jpg" alt="Electrical and air conditioning support work" loading="lazy" decoding="async" />
             <figcaption>
               <span>Electrical support</span>
               <strong>Professional support finished cleanly and on time.</strong>
             </figcaption>
           </figure>
-          <figure class="gallery-card reveal">
+          <figure class="gallery-card reveal" data-category="team">
             <img src="Assets/611945073_122168276774752665_838514749293394637_n.jpg" alt="Solar engineers on a rooftop installation" loading="lazy" decoding="async" />
             <figcaption>
               <span>Field team</span>
               <strong>Experience that builds confidence before the quote.</strong>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card reveal" data-category="electrical">
+            <img src="Assets/project.jpg" alt="Team checking electrical panels on site" loading="lazy" decoding="async" />
+            <figcaption>
+              <span>System commissioning</span>
+              <strong>Final checks and handover for reliable system start-up.</strong>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card reveal" data-category="solar">
+            <img src="Assets/639165320_122174072966752665_6638454448743379901_n.jpg" alt="Installed solar array with clean cabling" loading="lazy" decoding="async" />
+            <figcaption>
+              <span>Rooftop array</span>
+              <strong>Organised cabling and mounting for long-term reliability.</strong>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card reveal" data-category="electrical">
+            <img src="Assets/637915777_122174073098752665_5136957511916690828_n.jpg" alt="Electrical panel labelling and tidy wiring" loading="lazy" decoding="async" />
+            <figcaption>
+              <span>Panel works</span>
+              <strong>Neat labels and structured wiring for easier maintenance.</strong>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card reveal" data-category="hvac">
+            <img src="Assets/670788803_122181007688752665_9161803868854722833_n.jpg" alt="HVAC units installed on a commercial roof" loading="lazy" decoding="async" />
+            <figcaption>
+              <span>Commercial HVAC</span>
+              <strong>Robust installations designed for performance and access.</strong>
             </figcaption>
           </figure>
         </div>
@@ -354,6 +390,78 @@
               <span>Backup Power</span>
               <h3>Battery and inverter systems for resilient operations</h3>
               <p>Hybrid power solutions that protect clients from downtime and instability.</p>
+              <a href="#contact">Read Case Study &rarr;</a>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <img src="Assets/project four here.jpg" alt="Technicians installing solar panels on a rooftop" loading="lazy" decoding="async" />
+            <div>
+              <span>Solar Installation</span>
+              <h3>Rooftop solar deployment with clean, durable execution</h3>
+              <p>Neat electrical routing and panel placement designed for easy service access.</p>
+              <a href="#contact">Read Case Study &rarr;</a>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <img src="Assets/project five.jpg" alt="Completed commercial solar array at a customer site" loading="lazy" decoding="async" />
+            <div>
+              <span>Commercial Solar</span>
+              <h3>Project delivery for a commercial customer with tight timelines</h3>
+              <p>Fast, organised work that kept the site clean and the project on schedule.</p>
+              <a href="#contact">Read Case Study &rarr;</a>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <img src="Assets/project.jpg" alt="Controltek team finalising electrical connections" loading="lazy" decoding="async" />
+            <div>
+              <span>Site Electrical</span>
+              <h3>Precision electrical finishes for complex installations</h3>
+              <p>Structured wiring and neat distribution that makes maintenance easier.</p>
+              <a href="#contact">Read Case Study &rarr;</a>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <img src="Assets/project three.jpg" alt="Solar site with new inverter and cabling" loading="lazy" decoding="async" />
+            <div>
+              <span>System Upgrade</span>
+              <h3>Upgrades that improve efficiency and reduce faults</h3>
+              <p>Smart retrofit work to modernise existing solar and power systems.</p>
+              <a href="#contact">Read Case Study &rarr;</a>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <img src="Assets/project in progress.jpg" alt="Technicians working on a project site" loading="lazy" decoding="async" />
+            <div>
+              <span>Project Execution</span>
+              <h3>Field coordination and control for timely handover</h3>
+              <p>Strong site leadership paired with clear communication from start to finish.</p>
+              <a href="#contact">Read Case Study &rarr;</a>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <img src="Assets/639165320_122174072966752665_6638454448743379901_n.jpg" alt="Rooftop solar array and mounting" loading="lazy" decoding="async" />
+            <div>
+              <span>Rooftop Array</span>
+              <h3>Professional rooftop installations with tidy mounting</h3>
+              <p>Secure mounting and clear cable runs to make maintenance straightforward.</p>
+              <a href="#contact">Read Case Study &rarr;</a>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <img src="Assets/637915777_122174073098752665_5136957511916690828_n.jpg" alt="Electrical panel and labelling" loading="lazy" decoding="async" />
+            <div>
+              <span>Panel Works</span>
+              <h3>Distribution boards finished with clear labelling</h3>
+              <p>Structured panels reduce service time and improve safety.</p>
+              <a href="#contact">Read Case Study &rarr;</a>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <img src="Assets/670788803_122181007688752665_9161803868854722833_n.jpg" alt="Commercial HVAC rooftop units" loading="lazy" decoding="async" />
+            <div>
+              <span>HVAC Install</span>
+              <h3>Commercial HVAC delivery and commissioning</h3>
+              <p>Robust design and commissioning for dependable climate control.</p>
               <a href="#contact">Read Case Study &rarr;</a>
             </div>
           </article>

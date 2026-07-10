@@ -2407,7 +2407,6 @@ textarea {
   }
 
   .services__grid,
-  .projects__grid,
   .process-timeline,
   .equipment-grid,
   .industries-grid,
@@ -2416,6 +2415,11 @@ textarea {
   .cert-grid,
   .impact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .projects__grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
   }
 
   .cert-grid {
@@ -3135,6 +3139,36 @@ h4,
   line-height: 1.3;
 }
 
+.gallery-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.75rem 0 1rem;
+}
+
+.gallery-nav__item {
+  appearance: none;
+  border: 1px solid rgba(16, 36, 47, 0.14);
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--navy);
+  padding: 0.8rem 1.15rem;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 220ms ease, color 220ms ease, border-color 220ms ease;
+}
+
+.gallery-nav__item:hover,
+.gallery-nav__item.is-active {
+  background: var(--blue);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.gallery-card.is-hidden {
+  display: none;
+}
+
 .hero__panel-card {
   padding: 1.3rem;
   color: #ffffff;
@@ -3447,13 +3481,8 @@ h4,
 }
 
 .projects__grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-auto-rows: minmax(280px, auto);
-  gap: 1rem;
-}
-
-.project-card {
-  min-height: 320px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: minmax(300px, auto);
   border-radius: 6px;
   transition: transform 220ms ease, border-color 220ms ease;
   will-change: transform;

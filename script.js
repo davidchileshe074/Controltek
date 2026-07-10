@@ -205,6 +205,34 @@
     });
   });
 
+  const galleryNav = document.querySelector(".gallery-nav");
+  const galleryCards = Array.from(document.querySelectorAll(".gallery-card"));
+
+  if (galleryNav && galleryCards.length) {
+    const filterButtons = Array.from(galleryNav.querySelectorAll("[data-filter]"));
+
+    const setFilter = (filter) => {
+      galleryCards.forEach((card) => {
+        const category = card.dataset.category || "all";
+        const isVisible = filter === "all" || category === filter;
+        card.classList.toggle("is-hidden", !isVisible);
+        card.setAttribute("aria-hidden", String(!isVisible));
+      });
+    };
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        filterButtons.forEach((btn) => {
+          const isActive = btn === button;
+          btn.classList.toggle("is-active", isActive);
+          btn.setAttribute("aria-pressed", String(isActive));
+        });
+
+        setFilter(button.dataset.filter || "all");
+      });
+    });
+  }
+
   const revealObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
