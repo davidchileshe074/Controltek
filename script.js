@@ -250,6 +250,27 @@
     revealObserver.observe(el);
   });
 
+  const lazyVideoIframes = Array.from(document.querySelectorAll(".video-card iframe[data-src]"));
+  const videoObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        const iframe = entry.target;
+        const src = iframe.dataset.src;
+        if (src) {
+          iframe.src = src;
+          iframe.removeAttribute("data-src");
+        }
+
+        observer.unobserve(iframe);
+      });
+    },
+    { rootMargin: "200px 0px", threshold: 0.1 }
+  );
+
+  lazyVideoIframes.forEach((iframe) => videoObserver.observe(iframe));
+
   const counterObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
